@@ -1,0 +1,23 @@
+# Ignore Gradle project-specific cache directory
+.gradle
+.gradletasknamecache
+
+# Ignore Gradle build output directory
+build
+target
+
+# eclipse
+bin
+.settings/
+.classpath
+.project
+
+### VisualStudioCode ###
+.vscode/
+
+### Intellij ###
+.idea/
+out/
+*.iml
+*.ipr
+*.iws
