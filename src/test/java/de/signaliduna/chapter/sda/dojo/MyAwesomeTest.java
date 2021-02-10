@@ -7,6 +7,6 @@ public class MyAwesomeTest {
     
     @Test
     public void shouldFail() {
-        BDDAssertions.fail("Hallo Fehler");
+        BDDAssertions.fail("Hallo neuer Fehler");
     }
 }
