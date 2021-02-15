@@ -10,14 +10,15 @@ import org.junit.runner.RunWith;
 @RunWith(JUnitParamsRunner.class)
 public class FooBarQixAcceptanceTest {
 
-/*    Rules
+/*
+Rules:
     If the number is divisible by 3, write “Foo” instead of the number
     If the number is divisible by 5, add “Bar”
     If the number is divisible by 7, add “Qix”
     For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
 */
 
-  private FooBarQix application = new FooBarQix();
+  private final FooBarQix application = new FooBarQix();
 
   @Test
   @Parameters({
