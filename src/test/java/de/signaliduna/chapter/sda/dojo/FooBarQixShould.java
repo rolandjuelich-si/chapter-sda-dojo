@@ -22,12 +22,24 @@ public class FooBarQixShould {
   public void returnNumberForTwo() {
     //given
     final String givenNumber = "2";
+    
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+    
+    //then
+    then(actual).isEqualTo("2");
+  }
+  
+  @Test
+  public void returnNumberForFour() {
+    //given
+    final String givenNumber = "4";
 
     //when
     final String actual = new FooBarQix().compute(givenNumber);
 
     //then
-    then(actual).isEqualTo("2");
+    then(actual).isEqualTo("4");
   }
 
   @Test
@@ -46,6 +58,18 @@ public class FooBarQixShould {
   public void returnFooForNine() {
     //given
     final String givenNumber = "9";
+    
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+    
+    //then
+    then(actual).isEqualTo("Foo");
+  }
+
+  @Test
+  public void returnFooForTwelve() {
+    //given
+    final String givenNumber = "12";
 
     //when
     final String actual = new FooBarQix().compute(givenNumber);

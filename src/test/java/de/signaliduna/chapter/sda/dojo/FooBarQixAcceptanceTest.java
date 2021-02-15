@@ -32,6 +32,7 @@ Rules:
       "8,8", //
       "9,Foo", //
       "10,Bar", //
+      "12,Foo", //
       "13,Foo", //
       "15,FooBarBar", //
       "21,FooQix", //
