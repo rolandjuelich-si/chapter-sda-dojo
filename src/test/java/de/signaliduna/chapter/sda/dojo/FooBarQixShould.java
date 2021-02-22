@@ -3,7 +3,12 @@ package de.signaliduna.chapter.sda.dojo;
 import static org.assertj.core.api.BDDAssertions.then;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+
+@RunWith(JUnitParamsRunner.class)
 public class FooBarQixShould {
 
   @Test
@@ -125,4 +130,27 @@ public class FooBarQixShould {
     //then
     then(actual).isEqualTo("Qix");
   }
+  
+  @Test
+  public void returnQixForTwentyeight() {
+    //given
+    final String givenNumber = "28";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Qix");
+  }
+  
+  @Test
+  @Parameters({"14", "28", "49"})
+  public void returnQixForFourtynine(String givenNumber) {
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Qix");
+  }
+  
 }
