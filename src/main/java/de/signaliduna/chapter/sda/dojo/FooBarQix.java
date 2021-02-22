@@ -11,10 +11,11 @@ public class FooBarQix {
     if (number % 5 == 0) {
       return "Bar";
     }
-
-    if (number == 14) {
-      return "Qix";
-    }
+    
+    if (number % 7 == 0) {
+        return "Qix";
+      }
+    
     return givenNumber;
   }
 }

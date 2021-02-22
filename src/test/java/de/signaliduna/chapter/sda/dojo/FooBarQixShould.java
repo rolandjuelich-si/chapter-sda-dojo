@@ -125,4 +125,29 @@ public class FooBarQixShould {
     //then
     then(actual).isEqualTo("Qix");
   }
+  
+  @Test
+  public void returnQixForTwentyeight() {
+    //given
+    final String givenNumber = "28";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Qix");
+  }
+  
+  @Test
+  public void returnQixForFourtynine() {
+    //given
+    final String givenNumber = "49";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Qix");
+  }
+  
 }
