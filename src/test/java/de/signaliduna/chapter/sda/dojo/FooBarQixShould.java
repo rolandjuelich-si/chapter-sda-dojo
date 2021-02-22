@@ -118,34 +118,10 @@ public class FooBarQixShould {
     //then
     then(actual).isEqualTo("Bar");
   }
-
-  @Test
-  public void returnQixForFourteen() {
-    //given
-    final String givenNumber = "14";
-
-    //when
-    final String actual = new FooBarQix().compute(givenNumber);
-
-    //then
-    then(actual).isEqualTo("Qix");
-  }
-  
-  @Test
-  public void returnQixForTwentyeight() {
-    //given
-    final String givenNumber = "28";
-
-    //when
-    final String actual = new FooBarQix().compute(givenNumber);
-
-    //then
-    then(actual).isEqualTo("Qix");
-  }
-  
+   
   @Test
   @Parameters({"14", "28", "49"})
-  public void returnQixForFourtynine(String givenNumber) {
+  public void returnQixForDivisibleBySeven(String givenNumber) {
     //when
     final String actual = new FooBarQix().compute(givenNumber);
 
