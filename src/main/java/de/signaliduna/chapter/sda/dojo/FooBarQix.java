@@ -2,12 +2,15 @@ package de.signaliduna.chapter.sda.dojo;
 
 public class FooBarQix {
 
-  public String compute(String givenNumber) {
-    Integer number = Integer.valueOf(givenNumber);
-	  if ( number % 3 == 0) 
-    {
-        return "Foo";
-      }
+  public String compute(final String givenNumber) {
+    final int number = Integer.parseInt(givenNumber);
+    if (number % 3 == 0) {
+      return "Foo";
+    }
+
+    if (number % 5 == 0) {
+      return "Bar";
+    }
     return givenNumber;
   }
 }

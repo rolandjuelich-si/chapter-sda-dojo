@@ -77,4 +77,40 @@ public class FooBarQixShould {
     //then
     then(actual).isEqualTo("Foo");
   }
+
+  @Test
+  public void returnBarForFive() {
+    //given
+    final String givenNumber = "5";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Bar");
+  }
+
+  @Test
+  public void returnBarForTen() {
+    //given
+    final String givenNumber = "10";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Bar");
+  }
+
+  @Test
+  public void returnBarForTwenty() {
+    //given
+    final String givenNumber = "20";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Bar");
+  }
 }
