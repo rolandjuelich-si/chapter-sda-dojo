@@ -113,4 +113,16 @@ public class FooBarQixShould {
     //then
     then(actual).isEqualTo("Bar");
   }
+
+  @Test
+  public void returnQixForFourteen() {
+    //given
+    final String givenNumber = "14";
+
+    //when
+    final String actual = new FooBarQix().compute(givenNumber);
+
+    //then
+    then(actual).isEqualTo("Qix");
+  }
 }
