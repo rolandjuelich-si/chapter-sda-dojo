@@ -83,43 +83,18 @@ public class FooBarQixShould {
     then(actual).isEqualTo("Foo");
   }
 
+  
   @Test
-  public void returnBarForFive() {
-    //given
-    final String givenNumber = "5";
-
+  @Parameters({"5", "10", "20"})
+  public void returnBarForDivisibleByFive(String givenNumber) {
     //when
     final String actual = new FooBarQix().compute(givenNumber);
 
     //then
     then(actual).isEqualTo("Bar");
   }
-
-  @Test
-  public void returnBarForTen() {
-    //given
-    final String givenNumber = "10";
-
-    //when
-    final String actual = new FooBarQix().compute(givenNumber);
-
-    //then
-    then(actual).isEqualTo("Bar");
-  }
-
-  @Test
-  public void returnBarForTwenty() {
-    //given
-    final String givenNumber = "20";
-
-    //when
-    final String actual = new FooBarQix().compute(givenNumber);
-
-    //then
-    then(actual).isEqualTo("Bar");
-  }
-   
-  @Test
+  
+ @Test
   @Parameters({"14", "28", "49"})
   public void returnQixForDivisibleBySeven(String givenNumber) {
     //when
@@ -127,6 +102,5 @@ public class FooBarQixShould {
 
     //then
     then(actual).isEqualTo("Qix");
-  }
-  
+  } 
 }
