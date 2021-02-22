@@ -2,11 +2,10 @@ package de.signaliduna.chapter.sda.dojo;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
-import org.junit.Test;
-import org.junit.runner.RunWith;
-
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
+import org.junit.Test;
+import org.junit.runner.RunWith;
 
 @RunWith(JUnitParamsRunner.class)
 public class FooBarQixShould {
@@ -27,14 +26,14 @@ public class FooBarQixShould {
   public void returnNumberForTwo() {
     //given
     final String givenNumber = "2";
-    
+
     //when
     final String actual = new FooBarQix().compute(givenNumber);
-    
+
     //then
     then(actual).isEqualTo("2");
   }
-  
+
   @Test
   public void returnNumberForFour() {
     //given
@@ -63,10 +62,10 @@ public class FooBarQixShould {
   public void returnFooForNine() {
     //given
     final String givenNumber = "9";
-    
+
     //when
     final String actual = new FooBarQix().compute(givenNumber);
-    
+
     //then
     then(actual).isEqualTo("Foo");
   }
@@ -83,24 +82,23 @@ public class FooBarQixShould {
     then(actual).isEqualTo("Foo");
   }
 
-  
   @Test
   @Parameters({"5", "10", "20"})
-  public void returnBarForDivisibleByFive(String givenNumber) {
+  public void returnBarForDivisibleByFive(final String givenNumber) {
     //when
     final String actual = new FooBarQix().compute(givenNumber);
 
     //then
     then(actual).isEqualTo("Bar");
   }
-  
- @Test
+
+  @Test
   @Parameters({"14", "28", "49"})
-  public void returnQixForDivisibleBySeven(String givenNumber) {
+  public void returnQixForDivisibleBySeven(final String givenNumber) {
     //when
     final String actual = new FooBarQix().compute(givenNumber);
 
     //then
     then(actual).isEqualTo("Qix");
-  } 
+  }
 }
