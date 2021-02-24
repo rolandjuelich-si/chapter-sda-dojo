@@ -51,7 +51,7 @@ Rules:
 @Test
 public void shouldTest(){
 
-    Assertions.fail("Hallo Roland");
+    Assertions.fail("Hallo Kerstin");
 }
 
 }
