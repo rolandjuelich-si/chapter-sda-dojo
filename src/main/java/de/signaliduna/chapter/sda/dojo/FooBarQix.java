@@ -15,6 +15,10 @@ public class FooBarQix {
     if (number % 7 == 0) {
       return "Qix";
     }
+    
+    if (number == 13) {
+      return "foo";
+    }
 
     return givenNumber;
   }

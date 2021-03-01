@@ -1,11 +1,10 @@
 package de.signaliduna.chapter.sda.dojo;
 
 import static org.assertj.core.api.BDDAssertions.then;
-
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 
 @RunWith(JUnitParamsRunner.class)
 public class FooBarQixShould {
@@ -49,4 +48,14 @@ public class FooBarQixShould {
 		// then
 		then(actual).isEqualTo("Qix");
 	}
+	
+	@Test
+    @Parameters({ "13"})
+    public void returnFooForContainDigitThree(final String givenNumber) {
+	  // when
+      final String actual = new FooBarQix().compute(givenNumber);
+
+      // then
+      then(actual).isEqualTo("foo");
+    }
 }
