@@ -1,13 +1,10 @@
 package de.signaliduna.chapter.sda.dojo;
 
 import static org.assertj.core.api.BDDAssertions.then;
-
-import org.assertj.core.api.Assertions;
-
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 
 @RunWith(JUnitParamsRunner.class)
 public class FooBarQixAcceptanceTest {
@@ -48,10 +45,5 @@ Rules:
     // then
     then(actual).isEqualTo(expected);
   }
-@Test
-public void shouldTest(){
-
-    Assertions.fail("Hallo Kerstin");
-}
 
 }
