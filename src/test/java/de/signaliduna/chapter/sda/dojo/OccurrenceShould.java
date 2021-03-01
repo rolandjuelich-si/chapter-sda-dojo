@@ -17,6 +17,15 @@ public class OccurrenceShould {
     final String actual = new Occurence().compute(givenNumber);
 
     // then
-    then(actual).isEqualTo("foo");
+    then(actual).isEqualTo("Foo");
+  }
+  @Test
+  @Parameters({"33", "133", "1233", "330"})
+  public void returnFooFooForContainDigitThreetwice(final String givenNumber) {
+    // when
+    final String actual = new Occurence().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo("FooFoo");
   }
 }
