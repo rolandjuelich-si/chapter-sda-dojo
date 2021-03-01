@@ -49,14 +49,4 @@ public class FooBarQixShould {
     // then
     then(actual).isEqualTo("Qix");
   }
-
-  @Test
-  @Parameters({"13", "23", "43"})
-  public void returnFooForContainDigitThree(final String givenNumber) {
-    // when
-    final String actual = new FooBarQix().compute(givenNumber);
-
-    // then
-    then(actual).isEqualTo("foo");
-  }
 }

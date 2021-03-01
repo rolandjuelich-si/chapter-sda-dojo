@@ -15,10 +15,6 @@ public class FooBarQix {
     if (number % 7 == 0) {
       return "Qix";
     }
-    
-    if (givenNumber.contains("3")) {
-      return "foo";
-    }
 
     return givenNumber;
   }
