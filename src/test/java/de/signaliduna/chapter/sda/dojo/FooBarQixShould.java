@@ -50,7 +50,7 @@ public class FooBarQixShould {
 	}
 	
 	@Test
-    @Parameters({ "13"})
+    @Parameters({ "13", "23", "43"})
     public void returnFooForContainDigitThree(final String givenNumber) {
 	  // when
       final String actual = new FooBarQix().compute(givenNumber);

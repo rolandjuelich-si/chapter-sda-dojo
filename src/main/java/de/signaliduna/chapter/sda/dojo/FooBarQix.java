@@ -16,7 +16,7 @@ public class FooBarQix {
       return "Qix";
     }
     
-    if (number == 13) {
+    if (givenNumber.contains("3")) {
       return "foo";
     }
 
