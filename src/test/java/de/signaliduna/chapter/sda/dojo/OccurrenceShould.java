@@ -20,7 +20,7 @@ public class OccurrenceShould {
     then(actual).isEqualTo("Foo");
   }
   @Test
-  @Parameters({"33", "133", "1233", "330"})
+  @Parameters({"33", "133", "1233", "330", "303"})
   public void returnFooFooForContainDigitThreetwice(final String givenNumber) {
     // when
     final String actual = new Occurence().compute(givenNumber);

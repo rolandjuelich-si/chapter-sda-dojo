@@ -1,9 +1,12 @@
 package de.signaliduna.chapter.sda.dojo;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class Occurence {
 
   public String compute(String givenNumber) {
-   if (givenNumber.contains("33")) {
+      int count = StringUtils.countMatches(givenNumber, "3");
+      if (givenNumber.contains("33")) {
 	   return "FooFoo";
    }
    return "Foo";  
