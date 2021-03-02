@@ -51,8 +51,5 @@ public class FooBarQixShould {
     // then
     then(actual).isEqualTo("Qix");
   }
-@Test   
-public void test1(){
-    Assertions.fail("Hello Stefanie");
-}  
+
 }
