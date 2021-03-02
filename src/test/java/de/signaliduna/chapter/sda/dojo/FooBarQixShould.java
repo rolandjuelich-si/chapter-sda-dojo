@@ -53,6 +53,6 @@ public class FooBarQixShould {
   }
 @Test   
 public void test1(){
-    Assertions.fail("Hello world");
+    Assertions.fail("Hello Stefanie");
 }  
 }
