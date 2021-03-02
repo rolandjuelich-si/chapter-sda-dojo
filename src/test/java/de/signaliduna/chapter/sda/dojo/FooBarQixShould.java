@@ -2,6 +2,8 @@ package de.signaliduna.chapter.sda.dojo;
 
 import static org.assertj.core.api.BDDAssertions.then;
 
+import org.assertj.core.api.Assertions;
+
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Test;
@@ -49,4 +51,8 @@ public class FooBarQixShould {
     // then
     then(actual).isEqualTo("Qix");
   }
+@Test   
+public void test1(){
+    Assertions.fail("Hello world");
+}  
 }
