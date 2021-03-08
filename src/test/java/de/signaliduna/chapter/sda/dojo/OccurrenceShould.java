@@ -14,7 +14,7 @@ public class OccurrenceShould {
   @Parameters({"3", "13", "23", "43", "132"})
   public void returnFooForContainDigitThree(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
     
     // then
     then(actual).isEqualTo("Foo");
@@ -24,7 +24,7 @@ public class OccurrenceShould {
   @Parameters({"5", "15", "25", "152"})
   public void returnBarForContainDigitFive(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Bar");
@@ -34,7 +34,7 @@ public class OccurrenceShould {
   @Parameters({"7", "17", "27", "72", "172"})
   public void returnQixForContainDigitSeven(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Qix");
@@ -44,7 +44,7 @@ public class OccurrenceShould {
   @Parameters({"33", "133", "1233", "330", "303"})
   public void returnFooFooForContainDigitThreeTwice(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("FooFoo");
@@ -54,7 +54,7 @@ public class OccurrenceShould {
   @Parameters({"55", "155", "1255", "550", "505"})
   public void returnBarBarForContainDigitFiveTwice(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("BarBar");
@@ -64,7 +64,7 @@ public class OccurrenceShould {
   @Parameters({"77", "177", "1277", "770", "707"})
   public void returnQixQixForContainDigitThreeTwice(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("QixQix");
@@ -74,9 +74,20 @@ public class OccurrenceShould {
   @Parameters({"353", "3 5 3", "3053"})
   public void returnFooBarFoo(final String givenNumber) {
     // when
-    final String actual = new Occurence().compute(givenNumber);
+    final String actual = new Occurrence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("FooBarFoo");
   }
+  
+  @Test
+  @Parameters({"357", "30507", "1234567"})
+  public void returnFooBarQixForContainDigitThreeFiveSevenTwice(final String givenNumber) {
+    // when
+    final String actual = new Occurrence().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo("FooBarQix");
+  }
 }
+

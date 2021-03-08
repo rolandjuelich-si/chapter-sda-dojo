@@ -3,7 +3,7 @@ package de.signaliduna.chapter.sda.dojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Occurence {
+public class Occurrence {
 
   private static final String FOO = "Foo";
   private static final String BAR = "Bar";
