@@ -37,7 +37,8 @@ Rules:
       "21,FooQix", //
       "33,FooFooFoo", //
       "51,FooBar", //
-      "53,BarFoo"})
+      "53,BarFoo" ,//
+      "353,FooBarFoo"})
   public void shouldCompute(final String givenNumber, final String expected) {
     //when 
     final String actual = application.compute(givenNumber);
