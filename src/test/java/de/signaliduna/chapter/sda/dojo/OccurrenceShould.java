@@ -32,11 +32,31 @@ public class OccurrenceShould {
   
   @Test
   @Parameters({"33", "133", "1233", "330", "303"})
-  public void returnFooFooForContainDigitThreetwice(final String givenNumber) {
+  public void returnFooFooForContainDigitThreeTwice(final String givenNumber) {
     // when
     final String actual = new Occurence().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("FooFoo");
+  }
+
+  @Test
+  @Parameters({"55", "155", "1255", "550", "505"})
+  public void returnBarBarForContainDigitFiveTwice(final String givenNumber) {
+    // when
+    final String actual = new Occurence().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo("BarBar");
+  }
+
+  @Test
+  @Parameters({"353", "3 5 3", "3053"})
+  public void returnFooBarFoo(final String givenNumber) {
+    // when
+    final String actual = new Occurence().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo("FooBarFoo");
   }
 }
