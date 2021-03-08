@@ -61,6 +61,16 @@ public class OccurrenceShould {
   }
 
   @Test
+  @Parameters({"77", "177", "1277", "770", "707"})
+  public void returnQixQixForContainDigitThreeTwice(final String givenNumber) {
+    // when
+    final String actual = new Occurence().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo("QixQix");
+  }
+
+  @Test
   @Parameters({"353", "3 5 3", "3053"})
   public void returnFooBarFoo(final String givenNumber) {
     // when
