@@ -29,6 +29,16 @@ public class OccurrenceShould {
     // then
     then(actual).isEqualTo("Bar");
   }
+
+  @Test
+  @Parameters({"7", "17", "27", "72", "172"})
+  public void returnQixForContainDigitSeven(final String givenNumber) {
+    // when
+    final String actual = new Occurence().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo("Qix");
+  }
   
   @Test
   @Parameters({"33", "133", "1233", "330", "303"})

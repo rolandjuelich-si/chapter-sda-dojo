@@ -5,14 +5,21 @@ import java.util.List;
 
 public class Occurence {
 
+  private static final String FOO = "Foo";
+  private static final String BAR = "Bar";
+  private static final String QIX = "Qix";
+
   public String compute(final String givenNumber) {
     final List<String> result = new ArrayList<>();
-    for (final char aChar : givenNumber.toCharArray()) {
-      if ('3' == aChar) {
-        result.add("Foo");
+    for (final char digit : givenNumber.toCharArray()) {
+      if ('3' == digit) {
+        result.add(FOO);
       }
-      if ('5' == aChar) {
-        result.add("Bar");
+      if ('5' == digit) {
+        result.add(BAR);
+      }
+      if ('7' == digit) {
+        result.add(QIX);
       }
     }
     return String.join("", result);
