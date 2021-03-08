@@ -1,29 +1,20 @@
 package de.signaliduna.chapter.sda.dojo;
 
-import org.apache.commons.lang3.StringUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Occurence {
 
-  public String compute(String givenNumber) {
-      int count = StringUtils.countMatches(givenNumber, "3");
-      if (givenNumber.contains("33")) {
-	   return "FooFoo";
-
+  public String compute(final String givenNumber) {
+    final List<String> result = new ArrayList<>();
+    for (final char aChar : givenNumber.toCharArray()) {
+      if ('3' == aChar) {
+        result.add("Foo");
       }
-
-      if (givenNumber.contains("303")) {
-    	  return "FooFoo";  
+      if ('5' == aChar) {
+        result.add("Bar");
       }
-      char[] chars = givenNumber.toCharArray();
-      List<String> result = new ArrayList<>();
-      for (char aChar : chars) {
-          if ('3' == aChar) {
-           result.add("Foo");
-          }
-      }
-    return StringUtils.join(result);
+    }
+    return String.join("", result);
   }
 }
