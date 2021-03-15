@@ -8,20 +8,12 @@ public class FooBarQix {
         this.divisibility = divisibility;
     }
 
-    public String compute(final String givenNumber) {
-        final int number = Integer.parseInt(givenNumber);
-        if (number % 3 == 0) {
-            return "Foo";
-        }
+    public FooBarQix() {
+		// TODO Auto-generated constructor stub
+    	
+	}
 
-        if (number % 5 == 0) {
-            return "Bar";
-        }
-
-        if (number % 7 == 0) {
-            return "Qix";
-        }
-
-        return givenNumber;
+	public String compute(final String givenNumber) {
+		return divisibility.compute(givenNumber);
     }
 }

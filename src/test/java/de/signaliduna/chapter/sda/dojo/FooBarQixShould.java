@@ -11,7 +11,17 @@ public class FooBarQixShould {
     // given
     Divisibility divisibility = Mockito.mock(Divisibility.class);
     // when
-    divisibility.compute("");
+    new FooBarQix(divisibility).compute("");
+
+    // then
+    BDDMockito.then(divisibility).should().compute(Mockito.anyString());
+  }
+
+  @Test
+  public void testName1() throws Exception {
+    // given
+    Divisibility divisibility = Mockito.mock(Divisibility.class);
+    // when
     new FooBarQix(divisibility).compute("");
 
     // then
