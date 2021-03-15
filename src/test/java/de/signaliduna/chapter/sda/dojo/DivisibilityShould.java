@@ -10,13 +10,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 @RunWith(JUnitParamsRunner.class)
-public class FooBarQixShould {
+public class DivisibilityShould {
 
   @Test
   @Parameters({"1", "2", "4"})
   public void returnNumberForDefault(final String givenNumber) {
     // when
-    final String actual = new FooBarQix().compute(givenNumber);
+    final String actual = new Divisibility().compute(givenNumber);
 
     // then
     then(actual).isEqualTo(givenNumber);
@@ -26,7 +26,7 @@ public class FooBarQixShould {
   @Parameters({"6", "9", "12"})
   public void returnFooForDivisibleByThree(final String givenNumber) {
     // when
-    final String actual = new FooBarQix().compute(givenNumber);
+    final String actual = new Divisibility().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Foo");
@@ -36,7 +36,7 @@ public class FooBarQixShould {
   @Parameters({"5", "10", "20"})
   public void returnBarForDivisibleByFive(final String givenNumber) {
     // when
-    final String actual = new FooBarQix().compute(givenNumber);
+    final String actual = new Divisibility().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Bar");
@@ -46,7 +46,7 @@ public class FooBarQixShould {
   @Parameters({"14", "28", "49"})
   public void returnQixForDivisibleBySeven(final String givenNumber) {
     // when
-    final String actual = new FooBarQix().compute(givenNumber);
+    final String actual = new Divisibility().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Qix");

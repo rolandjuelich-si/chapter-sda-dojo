@@ -17,7 +17,7 @@ Rules:
     For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
 */
 
-  private final FooBarQix application = new FooBarQix();
+  private final Divisibility application = new Divisibility();
 
   @Test
   @Parameters({

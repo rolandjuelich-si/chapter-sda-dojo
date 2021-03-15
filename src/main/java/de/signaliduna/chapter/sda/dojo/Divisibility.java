@@ -1,6 +1,6 @@
 package de.signaliduna.chapter.sda.dojo;
 
-public class FooBarQix {
+public class Divisibility {
 
   public String compute(final String givenNumber) {
     final int number = Integer.parseInt(givenNumber);
