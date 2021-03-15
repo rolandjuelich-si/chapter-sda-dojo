@@ -7,7 +7,7 @@ import org.mockito.Mockito;
 public class FooBarQixShould {
 
   @Test
-  public void testName() throws Exception {
+  public void callDivisibility() throws Exception {
     // given
     Divisibility divisibility = Mockito.mock(Divisibility.class);
     // when
@@ -18,14 +18,14 @@ public class FooBarQixShould {
   }
 
   @Test
-  public void testName1() throws Exception {
+  public void callOccurrence() throws Exception {
     // given
-    Divisibility divisibility = Mockito.mock(Divisibility.class);
+    Occurrence occurrence = Mockito.mock(Occurrence.class);
     // when
-    new FooBarQix(divisibility).compute("");
+    new FooBarQix(occurrence).compute("");
 
     // then
-    BDDMockito.then(divisibility).should().compute(Mockito.anyString());
+    BDDMockito.then(occurrence).should().compute(Mockito.anyString());
   }
 
 }
