@@ -12,6 +12,8 @@ public class FooBarQixShould {
     Divisibility divisibility = Mockito.mock(Divisibility.class);
     // when
     divisibility.compute("");
+    new FooBarQix(divisibility).compute("");
+
     // then
     BDDMockito.then(divisibility).should().compute(Mockito.anyString());
   }

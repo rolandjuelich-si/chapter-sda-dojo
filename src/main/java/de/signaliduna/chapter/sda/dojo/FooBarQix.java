@@ -2,20 +2,26 @@ package de.signaliduna.chapter.sda.dojo;
 
 public class FooBarQix {
 
-  public String compute(final String givenNumber) {
-    final int number = Integer.parseInt(givenNumber);
-    if (number % 3 == 0) {
-      return "Foo";
+    Divisibility divisibility;
+
+    public FooBarQix(Divisibility divisibility) {
+        this.divisibility = divisibility;
     }
 
-    if (number % 5 == 0) {
-      return "Bar";
-    }
+    public String compute(final String givenNumber) {
+        final int number = Integer.parseInt(givenNumber);
+        if (number % 3 == 0) {
+            return "Foo";
+        }
 
-    if (number % 7 == 0) {
-      return "Qix";
-    }
+        if (number % 5 == 0) {
+            return "Bar";
+        }
 
-    return givenNumber;
-  }
+        if (number % 7 == 0) {
+            return "Qix";
+        }
+
+        return givenNumber;
+    }
 }
