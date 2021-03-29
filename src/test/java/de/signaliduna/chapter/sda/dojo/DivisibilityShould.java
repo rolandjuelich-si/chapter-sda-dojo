@@ -48,5 +48,7 @@ public class DivisibilityShould {
     // then
     then(actual).isEqualTo("Qix");
   }
+  
+  // TODO Testfall 21: Wenn mehrere Teilungsregeln zuteffen muss FooQix raus kommen
 
 }

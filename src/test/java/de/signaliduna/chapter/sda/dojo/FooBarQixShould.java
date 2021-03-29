@@ -21,5 +21,7 @@ public class FooBarQixShould {
     inOrder.verify(divisibility).compute(anyString());
     inOrder.verify(occurrence).compute(anyString());
   }
-
+  
+  // TODO Testfall 4: Wenn 4 rein kommt, soll auch 4 raus kommen
+  
 }
