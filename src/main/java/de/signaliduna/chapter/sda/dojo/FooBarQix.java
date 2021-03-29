@@ -18,7 +18,12 @@ public class FooBarQix {
         this.occurrence = occurrence;
     }
 
-  public String compute(final String givenNumber) {
+public FooBarQix(Divisibility divisibility2, Occurrence occurrence2) {
+	   this.divisibility = divisibility2;
+	   this.occurrence = occurrence2;
+	}
+
+public String compute(final String givenNumber) {
         if (occurrence != null) {
           return occurrence.compute(givenNumber);
         }
