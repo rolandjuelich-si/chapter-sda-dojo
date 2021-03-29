@@ -12,12 +12,8 @@ public class FooBarQix {
 
   public String compute(final String givenNumber) {
     String ergebnis = "";
-    if (divisibility != null) {
-      ergebnis += divisibility.compute(givenNumber);
-    }
-    if (occurrence != null) {
-      ergebnis += occurrence.compute(givenNumber);
-    }
+    ergebnis += divisibility.compute(givenNumber);
+    ergebnis += occurrence.compute(givenNumber);
     return ergebnis;
   }
 }

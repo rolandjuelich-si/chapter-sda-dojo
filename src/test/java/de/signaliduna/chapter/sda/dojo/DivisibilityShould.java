@@ -1,13 +1,10 @@
 package de.signaliduna.chapter.sda.dojo;
 
 import static org.assertj.core.api.BDDAssertions.then;
-
-import org.assertj.core.api.Assertions;
-
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 
 @RunWith(JUnitParamsRunner.class)
 public class DivisibilityShould {
@@ -19,7 +16,7 @@ public class DivisibilityShould {
     final String actual = new Divisibility().compute(givenNumber);
 
     // then
-    then(actual).isEqualTo(givenNumber);
+    then(actual).isEmpty();
   }
 
   @Test

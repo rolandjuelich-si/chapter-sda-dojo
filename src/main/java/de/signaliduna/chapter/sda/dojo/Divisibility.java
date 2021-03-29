@@ -16,6 +16,6 @@ public class Divisibility {
       return "Qix";
     }
 
-    return givenNumber;
+    return "";
   }
 }
