@@ -1,45 +1,48 @@
 package de.signaliduna.chapter.sda.dojo;
 
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.BDDMockito.then;
+import static org.mockito.Mockito.inOrder;
+import static org.mockito.Mockito.mock;
+
 import org.junit.Test;
-import org.mockito.BDDMockito;
-import org.mockito.Mockito;
 
 public class FooBarQixShould {
 
   @Test
-  public void callDivisibility() throws Exception {
+  public void callDivisibility() {
     // given
-    Divisibility divisibility = Mockito.mock(Divisibility.class);
+    final Divisibility divisibility = mock(Divisibility.class);
     // when
     new FooBarQix(divisibility, null).compute("");
 
     // then
-    BDDMockito.then(divisibility).should().compute(Mockito.anyString());
+    then(divisibility).should().compute(anyString());
   }
 
   @Test
-  public void callOccurrence() throws Exception {
+  public void callOccurrence() {
     // given
-    Occurrence occurrence = Mockito.mock(Occurrence.class);
+    final Occurrence occurrence = mock(Occurrence.class);
     // when
     new FooBarQix(null, occurrence).compute("");
-    
+
     // then
-    BDDMockito.then(occurrence).should().compute(Mockito.anyString());
+    then(occurrence).should().compute(anyString());
   }
 
   @Test
-  public void callDivisibilityAndOccurrence() throws Exception {
+  public void callDivisibilityAndOccurrence() {
     // given
-    Divisibility divisibility = Mockito.mock(Divisibility.class);
-    Occurrence occurrence = Mockito.mock(Occurrence.class);
+    final Divisibility divisibility = mock(Divisibility.class);
+    final Occurrence occurrence = mock(Occurrence.class);
     // when
     //divisibility.compute("");
     new FooBarQix(divisibility, occurrence).compute("");
 
     // then
-    BDDMockito.then(occurrence).should().compute(Mockito.anyString());
-    BDDMockito.then(divisibility).should().compute(Mockito.anyString());
+    final var inOrder = inOrder(divisibility, occurrence);
+    inOrder.verify(divisibility).compute(anyString());
+    inOrder.verify(occurrence).compute(anyString());
   }
-
 }

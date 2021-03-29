@@ -11,12 +11,13 @@ public class FooBarQix {
   }
 
   public String compute(final String givenNumber) {
-    if (occurrence != null) {
-      return occurrence.compute(givenNumber);
-    }
+    String ergebnis = "";
     if (divisibility != null) {
-      return divisibility.compute(givenNumber);
+      ergebnis += divisibility.compute(givenNumber);
     }
-    return null;
+    if (occurrence != null) {
+      ergebnis += occurrence.compute(givenNumber);
+    }
+    return ergebnis;
   }
 }
