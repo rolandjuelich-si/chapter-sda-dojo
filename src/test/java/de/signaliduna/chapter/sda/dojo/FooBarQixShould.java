@@ -34,7 +34,8 @@ public class FooBarQixShould {
     Divisibility divisibility = Mockito.mock(Divisibility.class);
     Occurrence occurrence = Mockito.mock(Occurrence.class);
     // when
-    new FooBarQix(null, occurrence).compute("");
+    //divisibility.compute("");
+    new FooBarQix(divisibility, occurrence).compute("");
 
     // then
     BDDMockito.then(occurrence).should().compute(Mockito.anyString());
