@@ -11,7 +11,7 @@ public class FooBarQixShould {
     // given
     Divisibility divisibility = Mockito.mock(Divisibility.class);
     // when
-    new FooBarQix(divisibility).compute("");
+    new FooBarQix(divisibility, null).compute("");
 
     // then
     BDDMockito.then(divisibility).should().compute(Mockito.anyString());
@@ -22,7 +22,7 @@ public class FooBarQixShould {
     // given
     Occurrence occurrence = Mockito.mock(Occurrence.class);
     // when
-    new FooBarQix(occurrence).compute("");
+    new FooBarQix(null, occurrence).compute("");
 
     // then
     BDDMockito.then(occurrence).should().compute(Mockito.anyString());
