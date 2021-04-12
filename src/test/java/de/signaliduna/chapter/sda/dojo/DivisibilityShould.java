@@ -51,4 +51,14 @@ public class DivisibilityShould {
   
   // TODO Testfall 21: Wenn mehrere Teilungsregeln zuteffen muss FooQix raus kommen
 
+  // Ich verstehe kein Wort XD
+  @Test
+  @Parameters({"15, FooBar"})
+  public void returnFooBar(final String givenNumber, final String expected) {
+    // when
+    final String actual = new Divisibility().compute(givenNumber);
+
+    // then
+    then(actual).isEqualTo(expected);
+  }
 }
