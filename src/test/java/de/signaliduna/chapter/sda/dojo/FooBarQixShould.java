@@ -28,19 +28,21 @@ public class FooBarQixShould {
     inOrder.verify(occurrence).compute(anyString());
   }
 
-  // TODO Testfall 4: Wenn 4 rein kommt, soll auch 4 raus kommen
   @Test
   @Parameters({
-    "1,1"})
-  public void returnGivenNumberWhenIrgendwas(String given, String expected) {
+      "1,1",
+      "2,2",
+      "4,4"
+  })
+  public void returnGivenNumberIfNoRuleApplies(final String given, final String expected) {
     // given
     final Divisibility divisibility = new Divisibility();
     final Occurrence occurrence = new Occurrence();
-    
+
     // when
-    final String compute = new FooBarQix(divisibility, occurrence).compute(given);
+    final String actual = new FooBarQix(divisibility, occurrence).compute(given);
 
     // then
-    then(compute).isEqualTo(expected);
+    then(actual).isEqualTo(expected);
   }
 }
