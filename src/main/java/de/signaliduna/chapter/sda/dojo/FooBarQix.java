@@ -14,6 +14,11 @@ public class FooBarQix {
     String ergebnis = "";
     ergebnis += divisibility.compute(givenNumber);
     ergebnis += occurrence.compute(givenNumber);
+
+    if (ergebnis.isEmpty()) {
+      ergebnis = givenNumber;
+    }
+
     return ergebnis;
   }
 }
