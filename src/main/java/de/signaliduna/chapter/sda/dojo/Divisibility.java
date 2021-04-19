@@ -3,12 +3,13 @@ package de.signaliduna.chapter.sda.dojo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Divisibility {
+public class Divisibility implements Computable{
 
   private static final String FOO = "Foo";
   private static final String BAR = "Bar";
   private static final String QIX = "Qix";
 
+  @Override
   public String compute(final String givenNumber) {
     final List<String> result = new ArrayList<>();
     final int number = Integer.parseInt(givenNumber);
