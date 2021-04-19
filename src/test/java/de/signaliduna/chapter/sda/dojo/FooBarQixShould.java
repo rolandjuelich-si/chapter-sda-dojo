@@ -5,10 +5,12 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 
-import junitparams.JUnitParamsRunner;
-import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InOrder;
+
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
 
 @RunWith(JUnitParamsRunner.class)
 public class FooBarQixShould {
@@ -23,7 +25,7 @@ public class FooBarQixShould {
     new FooBarQix(divisibility, occurrence).compute("");
 
     // then
-    final var inOrder = inOrder(divisibility, occurrence);
+    final InOrder inOrder = inOrder(divisibility, occurrence);
     inOrder.verify(divisibility).compute(anyString());
     inOrder.verify(occurrence).compute(anyString());
   }

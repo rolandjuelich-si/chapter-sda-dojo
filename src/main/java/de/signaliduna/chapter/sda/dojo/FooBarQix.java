@@ -1,6 +1,6 @@
 package de.signaliduna.chapter.sda.dojo;
 
-public class FooBarQix {
+public class FooBarQix implements Computable {
 
   private final Divisibility divisibility;
   private final Occurrence occurrence;
@@ -10,7 +10,8 @@ public class FooBarQix {
     this.occurrence = occurrence;
   }
 
-  public String compute(final String givenNumber) {
+  @Override
+public String compute(final String givenNumber) {
     String ergebnis = "";
     ergebnis += divisibility.compute(givenNumber);
     ergebnis += occurrence.compute(givenNumber);
