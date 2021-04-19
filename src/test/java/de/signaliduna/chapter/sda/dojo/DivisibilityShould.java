@@ -13,7 +13,7 @@ public class DivisibilityShould {
   @Parameters({"1", "2", "4"})
   public void returnNumberForDefault(final String givenNumber) {
     // when
-    final String actual = new Divisibility().compute(givenNumber);
+    final String actual = Divisibility.fooBarQix().compute(givenNumber);
 
     // then
     then(actual).isEmpty();
@@ -23,7 +23,7 @@ public class DivisibilityShould {
   @Parameters({"6", "9", "12"})
   public void returnFooForDivisibleByThree(final String givenNumber) {
     // when
-    final String actual = new Divisibility().compute(givenNumber);
+    final String actual = Divisibility.fooBarQix().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Foo");
@@ -33,7 +33,7 @@ public class DivisibilityShould {
   @Parameters({"5", "10", "20"})
   public void returnBarForDivisibleByFive(final String givenNumber) {
     // when
-    final String actual = new Divisibility().compute(givenNumber);
+    final String actual = Divisibility.fooBarQix().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Bar");
@@ -43,7 +43,7 @@ public class DivisibilityShould {
   @Parameters({"14", "28", "49"})
   public void returnQixForDivisibleBySeven(final String givenNumber) {
     // when
-    final String actual = new Divisibility().compute(givenNumber);
+    final String actual = Divisibility.fooBarQix().compute(givenNumber);
 
     // then
     then(actual).isEqualTo("Qix");
@@ -53,7 +53,7 @@ public class DivisibilityShould {
   @Parameters({"15, FooBar", "21, FooQix", "35, BarQix"})
   public void returnFooBar(final String givenNumber, final String expected) {
     // when
-    final String actual = new Divisibility().compute(givenNumber);
+    final String actual = Divisibility.fooBarQix().compute(givenNumber);
 
     // then
     then(actual).isEqualTo(expected);
