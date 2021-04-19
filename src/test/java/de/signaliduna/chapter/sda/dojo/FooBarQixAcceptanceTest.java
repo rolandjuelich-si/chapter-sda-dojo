@@ -1,6 +1,8 @@
 package de.signaliduna.chapter.sda.dojo;
 
 import static org.assertj.core.api.BDDAssertions.then;
+
+import java.util.Arrays;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import junitparams.JUnitParamsRunner;
@@ -17,7 +19,7 @@ Rules:
     For each digit 3, 5, 7, add “Foo”, “Bar”, “Qix” in the digits order.
 */
 
-  private final Computable application = new FooBarQix(new Divisibility(),new Occurrence());
+  private final Computable application = new FooBarQix(Arrays.asList(new Divisibility(), new Occurrence()));
 
   @Test
   @Parameters({

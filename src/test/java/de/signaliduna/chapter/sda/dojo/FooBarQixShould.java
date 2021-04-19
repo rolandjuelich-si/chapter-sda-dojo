@@ -5,6 +5,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.mock;
 
+import java.util.Arrays;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InOrder;
@@ -22,7 +23,7 @@ public class FooBarQixShould {
     final Occurrence occurrence = mock(Occurrence.class);
 
     // when
-    new FooBarQix(divisibility, occurrence).compute("");
+    new FooBarQix(Arrays.asList(divisibility, occurrence)).compute("");
 
     // then
     final InOrder inOrder = inOrder(divisibility, occurrence);
@@ -42,7 +43,7 @@ public class FooBarQixShould {
     final Occurrence occurrence = new Occurrence();
 
     // when
-    final String actual = new FooBarQix(divisibility, occurrence).compute(given);
+    final String actual = new FooBarQix(Arrays.asList(divisibility, occurrence)).compute(given);
 
     // then
     then(actual).isEqualTo(expected);
